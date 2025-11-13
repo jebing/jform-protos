@@ -1,0 +1,10 @@
+syntax = "proto3";
+package proto.model.submissions;
+
+option go_package = "github.com/jebing/jform-protos/go/submissions";
+
+message SubmissionNotif {
+    string id = 1;
+    string user_id = 2;
+    map<string, string> messages = 11;
+}
