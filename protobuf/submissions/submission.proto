@@ -6,5 +6,6 @@ option go_package = "github.com/jebing/jform-protos/go/submissions";
 message SubmissionNotif {
     string id = 1;
     string user_id = 2;
+    string form_id = 3;
     map<string, string> messages = 11;
 }

@@ -25,6 +25,7 @@ type SubmissionNotif struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Id            string                 `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
 	UserId        string                 `protobuf:"bytes,2,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
+	FormId        string                 `protobuf:"bytes,3,opt,name=form_id,json=formId,proto3" json:"form_id,omitempty"`
 	Messages      map[string]string      `protobuf:"bytes,11,rep,name=messages,proto3" json:"messages,omitempty" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
@@ -74,6 +75,13 @@ func (x *SubmissionNotif) GetUserId() string {
 	return ""
 }
 
+func (x *SubmissionNotif) GetFormId() string {
+	if x != nil {
+		return x.FormId
+	}
+	return ""
+}
+
 func (x *SubmissionNotif) GetMessages() map[string]string {
 	if x != nil {
 		return x.Messages
@@ -85,10 +93,11 @@ var File_submissions_submission_proto protoreflect.FileDescriptor
 
 const file_submissions_submission_proto_rawDesc = "" +
 	"\n" +
-	"\x1csubmissions/submission.proto\x12\x17proto.model.submissions\"\xcb\x01\n" +
+	"\x1csubmissions/submission.proto\x12\x17proto.model.submissions\"\xe4\x01\n" +
 	"\x0fSubmissionNotif\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\x12\x17\n" +
-	"\auser_id\x18\x02 \x01(\tR\x06userId\x12R\n" +
+	"\auser_id\x18\x02 \x01(\tR\x06userId\x12\x17\n" +
+	"\aform_id\x18\x03 \x01(\tR\x06formId\x12R\n" +
 	"\bmessages\x18\v \x03(\v26.proto.model.submissions.SubmissionNotif.MessagesEntryR\bmessages\x1a;\n" +
 	"\rMessagesEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
