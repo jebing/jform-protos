@@ -7,5 +7,6 @@ message SubmissionNotif {
     string id = 1;
     string user_id = 2;
     string form_id = 3;
+    string form_name = 4;
     map<string, string> messages = 11;
 }
